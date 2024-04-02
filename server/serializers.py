@@ -33,5 +33,8 @@ class hotelsSerializer(serializers.ModelSerializer):
     class Meta:
         model = hotels
         fields = '__all__'
-
+class BungalowSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Bungalow
+        fields = '__all__'
 

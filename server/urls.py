@@ -9,4 +9,6 @@ urlpatterns = [
     path("godowns/",godownsAPIView.as_view(),name="godown"),
     path("hotels/",hotelsAPIView.as_view() ,name="add-hotel"),
     path("estates/",estatesAPIView.as_view() ,name="add-estate"),
+    path("Bungalow/",BungalowAPIView.as_view(),name="Bungalow")
+    
 ]

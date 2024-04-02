@@ -85,3 +85,15 @@ class hotels(models.Model):
     def __str__ (self):
         return self.hotel_name
 
+class Bungalow(models.Model):
+    County = models.CharField(max_length = 250)
+    Town = models.CharField(max_length =124)
+    Bungalow_name = models.CharField(max_length = 70)
+    estate_name = models.CharField(max_length = 70)
+    location = models.CharField(max_length=70)
+    owner = models.CharField(max_length = 70)
+    contact = models.IntegerField()
+    
+    
+    def __str__ (self):
+        return self.Bungalow_name
