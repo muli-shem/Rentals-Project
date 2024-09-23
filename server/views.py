@@ -38,7 +38,17 @@ class BungalowAPIView(ListAPIView,CreateAPIView):
     queryset= Bungalow.objects.all()
     serializer_class= BungalowSerializer
     permission_classes= [AllowAny]
+class StudentHostelsAPIView(ListAPIView,CreateAPIView):
+    queryset= StudentHostels.objects.all()
+    serializer_class= StudentHostelsSerializer
+    permission_classes = [AllowAny]
 
+class LadiesHostelsAPIView(ListAPIView, CreateAPIView):
+    queryset=LadiesHostels.objects.all()
+    serializer_class=LadiesHostelsSerializer
+    permission_classes = [AllowAny]
 
-
-    
+class KioskShopsAPIView(ListAPIView, CreateAPIView):
+    queryset=KioskShops.objects.all()
+    serializer_class=KioskShopsSerializer
+    permission_classes = [AllowAny]

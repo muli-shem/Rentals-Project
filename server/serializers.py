@@ -38,3 +38,16 @@ class BungalowSerializer(serializers.ModelSerializer):
         model = Bungalow
         fields = '__all__'
 
+class StudentHostelsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=StudentHostels
+        fields = '__all__'
+
+class LadiesHostelsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=LadiesHostels
+        fields = '__all__'
+class KioskShopsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=KioskShops
+        fields = '__all__'

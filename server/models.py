@@ -97,3 +97,37 @@ class Bungalow(models.Model):
     
     def __str__ (self):
         return self.Bungalow_name
+    
+class StudentHostels(models.Model):
+    County = models.CharField(max_length =124)
+    Town = models.CharField(max_length =124)
+    hostel_name = models.CharField(max_length = 70)
+    location = models.CharField(max_length=70)
+    owner = models.CharField(max_length = 70)
+    contact = models.IntegerField()
+
+
+    def __str__ (self):
+        return self.hostel_name
+    
+
+class LadiesHostels(models.Model):
+    County = models.CharField(max_length =124)
+    hostel_name = models.CharField(max_length = 70)
+    location = models.CharField(max_length=70)
+    owner = models.CharField(max_length = 70)
+    contact = models.IntegerField()
+
+    def __str__ (self):
+        return self.hostel_name
+
+class KioskShops(models.Model):
+    County = models.CharField(max_length =124)
+    Street= models.CharField(max_length = 70)
+    location = models.CharField(max_length=70)
+    owner = models.CharField(max_length = 70)
+    contact = models.IntegerField()
+    image = models.ImageField(upload_to='kiosk_images/', blank=True, null=True)  # Image field
+
+    def __str__(self):
+        return f"{self.owner}'s shop in {self.location}, {self.County}"
